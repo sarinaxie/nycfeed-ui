@@ -1,8 +1,10 @@
 .App-header {
   background-color: #222;
-  color: white;
+  color: gray;
 }
-
+.navbar-menu {
+  background-color: #222;
+}
 .navbar-item {
   color: white;
 }
@@ -19,9 +21,7 @@
   margin-top: 20px;
 }
 
-.card {
-  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.1);
-}
+
 
 .page-title {
   font-size: 2rem;
@@ -37,13 +37,41 @@
   margin-bottom: 2.75rem;
 }
 
-.card button {
-  border: none;
-  color: #3273dc;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 16px;
+.desktop-logo {
+  padding-top: 1em;
+  padding-bottom:.1em;
 }
-.card button:hover {
-  color: #363636;
+#nyc {
+  color: #282828;
+  font-size: xx-large;
+  font-family: "Impact", Charcoal, sans-serif;
+  padding-right: .2em;
+
+}
+
+
+#nav-toggle-state {
+  display: none;
+}
+
+#nav-toggle-state:checked ~ .navbar-menu {
+  display: block;
+}
+
+
+.mobile-logo {
+  display:none;
+}
+.navbar-start {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-left: 1em;
+}
+/* need to test/change max width */
+@media only screen and (max-width: 900px) {
+    .mobile-logo {
+      display: inline-block;
+    }
+    .desktop-logo {
+      display: none;
+    }
 }
